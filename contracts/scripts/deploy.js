@@ -1,14 +1,12 @@
-// deploy.js
-const { ethers } = require("ethers");
-require('dotenv').config();
+const hre = require("hardhat");
 
 async function main() {
-    const provider = new ethers.JsonRpcProvider(process.env.RPC_URL || "https://0g-testnet-rpc.com"); // Replace with 0G testnet RPC
-    const wallet = new ethers.Wallet(process.env.PRIVATE_KEY || "", provider); // Add in .env
+    const [deployer] = await hre.ethers.getSigners();
+    console.log("Deploying with account:", deployer.address);
 
-    const contractFactory = await ethers.getContractFactory("TradeSignal", wallet);
+    const TradeSignal = await hre.ethers.getContractFactory("TradeSignal");
     console.log("Deploying contract...");
-    const contract = await contractFactory.deploy();
+    const contract = await TradeSignal.deploy();
     await contract.waitForDeployment();
 
     console.log(`Contract deployed to: ${contract.target}`);

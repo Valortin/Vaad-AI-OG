@@ -6,6 +6,8 @@ VAAD AI-0G (Verifiable AI-Assisted Decentralized Trading) is an innovative, AI-p
 - **Repository**: [https://github.com/Valortin/Vaad-AI-OG](https://github.com/Valortin/Vaad-AI-OG)
 - **Creator**: Valortin
 
+### Smart contract deployed to 0G MAINNET: 0xe9E6783861f586AfE6f3f70E51D1ee5642FA593E
+
 ## What It Does
 VAAD AI-0G empowers traders with:
 - **Real-Time Market Data**: Live token prices for Bitcoin, Ethereum, and more.
